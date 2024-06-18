@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #06062c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 28px;
+    margin-right: 10px; /* Adjust margin as needed */
+    color: #333;
+}
+
+.typing-text {
+    position: relative;
+    color: #333;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.typing-text::after {
+    content: ' Spiral Print Pattern';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    color: #333;
+    animation: typing 3s steps(40, end) infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+.input-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-container label {
+    font-size: 15px;
+    color: #555;
+}
+
+.input-container input[type="number"] {
+    padding: 5px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 50px;
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+.input-container input[type="number"]:focus {
+    outline: none;
+    border-color: #5c6ac4;
+}
+
+.input-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #5c6ac4;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-container button:hover {
+    background-color: #4859a8;
+}
+
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+td {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.appear {
+    opacity: 1;
+}
+
+.blink {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0.5;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    .input-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .input-container label {
+        font-size: 16px;
+    }
+    .input-container input[type="number"] {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #ffffff;
+}
