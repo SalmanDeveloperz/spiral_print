@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiral Print Pattern</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="title-container">
+        <h1>Welcome to Spiral Print Pattern<span class="typing-text"></span></h1>
+    </div>
+    
+    <div class="input-container">
+        <label for="rows"><b>Enter number of rows:</b></label>
+        <input type="number" id="rows" name="rows" value="3">
+        <label for="cols"><b>Enter number of columns:</b></label>
+        <input type="number" id="cols" name="cols" value="3">
+        <label for="speed"><b>Speed (ms):</b></label>
+        <input type="number" id="speed" name="speed" value="300" min="100" max="1000" step="100">
+        <button onclick="generateSpiral()"><b>Generate Spiral Matrix</b></button>
+    </div>
+
+    <table id="spiralMatrix"></table>
+</div>
+
+<script src="script.js"></script>
+<footer>&copy; 2024 Muhammad Salman. All rights reserved.</footer>
+
+</body>
+</html>
